@@ -1,9 +1,14 @@
 import React from 'react';
+import Navigation from './Navigation';
 
-const DashboardPage = () => (
+const DashboardPage = () => {
+    return (
+        <div>
+            <h1>Dashboard</h1>
+            <Navigation />
+        </div>
+    );
 
-    <h1>Dashboard</h1>
-
-);
+};
 
 export default DashboardPage;

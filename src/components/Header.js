@@ -8,7 +8,7 @@ const Header = () => (
             <input type="text" placeholder="Search Stocks or Portfolio or News" className="input-search" />
         </form>
         <NavLink to="/settings" activeClassName="is-active">Settings</NavLink>
-        <NavLink to="/account" activeClassName="is-active">Account</NavLink>
+        <NavLink to="/accounts" activeClassName="is-active">Account</NavLink>
     </header>
 );
 
