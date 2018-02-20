@@ -1,0 +1,23 @@
+
+@import 'partials/variables';
+@import 'partials/nav';
+
+
+/* Modifiers */
+.header{
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $white;
+    z-index: 100;
+    box-shadow: 0 0 30px 0 rgba(1, 121, 255, 0.07), 0 0 30px 0 rgba(0, 0, 0, 0.10);
+}
+
+.header__margin{
+    margin-top: 25px;
+}
+
+.header--search-spacing{
+    margin-top: 6px;
+}
