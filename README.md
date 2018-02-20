@@ -1,11 +1,11 @@
-# TheAsia
+# Thomson Reuters Assignment
 
-Technical Assignment for a Frontend Developer Role
+Technical Assignment for the Solutions Consultant Role
 
 
 ## Running the project
 
-Clone the repo, cd into 'theasia' directory and run
+Clone the repo, cd into 'reuters' directory and run
 
 ```
 yarn install
