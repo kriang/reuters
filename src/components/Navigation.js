@@ -3,9 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
     return (
-        <div>
-            
-            <div className="col-xs-12 col-md-2 aside">
+        <div className="col-xs-12 col-md-2 aside">
                                     
                 { /* Logo Wrapper */}
                 <div className="col-xs-12">
@@ -37,7 +35,6 @@ const Navigation = () => {
                     </ul>
                 </nav>{ /*End of Primary Navigation */}
             </div>
-        </div>
     );
 }
 
