@@ -1,9 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Header from './Header';
-import Stocks from './Stocks';
-import MarketPerformance from './MarketPerformance';
-import MyPortfolio from './MyPortfolio';
+
 
 const DashboardPage = () => {
     return (
@@ -35,8 +33,8 @@ const DashboardPage = () => {
                                             
                                             <div className="card-body padding-top-fix">
 
-                                                { /* Stocks Listing Widget & making it responsive */}
-                                                <Stocks />
+                                                { /* Favourites Widget */}
+                                                
 
                                             </div>
 
@@ -45,31 +43,7 @@ const DashboardPage = () => {
                                     </div>
 
                                 </div>
-
-
-                                <div className="col-xs-12 col-md-4">
-                                    <div className="row">
-                                        <div className="card w-100 mb-3">
-                                            
-                                            <div className="card-body">
-                                                <MarketPerformance />
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div className="card w-100">
-                                            
-                                            <div className="card-body">
-
-                                                <MyPortfolio />
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-
+                                
 
                             </div>
 
