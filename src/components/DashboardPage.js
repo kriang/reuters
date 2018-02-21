@@ -7,11 +7,13 @@ import MyPortfolio from './MyPortfolio';
 const DashboardPage = () => {
     return (
         <div>
-            <h1>Dashboard</h1>
-            <Navigation />
-            <Stocks />
-            <MarketPerformance />
-            <MyPortfolio />
+            <main>
+                <div className="container">
+                    <div className="row">
+                        <Navigation />
+                    </div>
+                </div>
+            </main>
         </div>
     );
 
