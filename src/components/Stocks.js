@@ -66,17 +66,6 @@ class Stocks extends React.Component{
                                 })
                             }{/* End of Stocks Item Loop */}
 
-
-                            {
-                                /*<tr>
-                                    <td>MSFT</td>
-                                    <td>15000</td>
-                                    <td>72.81</td>
-                                    <td>0.98</td>
-                                    <td>26.93</td>
-                                    <td className="text-right">+140.23(7.81%)</td>
-                                </tr>*/
-                            }
                             
                         </tbody>
     

@@ -35,12 +35,12 @@ const DashboardPage = () => {
                                             
                                             <div className="card-body padding-top-fix">
 
-                                                { /* Stocks Listing Widget */}
+                                                { /* Stocks Listing Widget & making it responsive */}
                                                 <Stocks />
 
                                             </div>
 
-                                        </div>{ /* End of StockListing Widget Wrapper */}
+                                        </div>
 
                                     </div>
 
@@ -52,26 +52,21 @@ const DashboardPage = () => {
                                         <div className="card w-100 mb-3">
                                             
                                             <div className="card-body">
-                                                
-                                                { /* MarketPerformance Widget */}
                                                 <MarketPerformance />
-
                                             </div>
 
-                                        </div>{ /* End of MarketPerformance Widget Wrapper */}
+                                        </div>
                                     </div>
-                                    
                                     <div className="row">
                                         <div className="card w-100">
                                             
                                             <div className="card-body">
 
-                                                { /* MyPortfolio Widget */}
                                                 <MyPortfolio />
 
                                             </div>
                                         </div>
-                                    </div>{ /* End of MyPortfolio Widget Wrapper */}
+                                    </div>
                                     
                                 </div>
 
