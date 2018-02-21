@@ -5,8 +5,13 @@ import {Line} from 'react-chartjs-2';
 class MyPortfolio extends React.Component{
 
     constructor(props){
+
         super(props);
+        
         this.state = {
+            myPortfolioTotal: "239,123.31",
+            myPortfolioChange: "5,342.30",
+            myPortfolioChangePercentage: "4.91",
             lineChartData: {
                 labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
                 datasets: [
@@ -29,8 +34,8 @@ class MyPortfolio extends React.Component{
         return (
             <div>
                 <h6 className="card-subtitle mb-2 text-muted">MY PORTFOLIO</h6>
-                <h2 className="primary-text-color">$239,123.31</h2>
-                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> 5,342.30 (4.91%)</h5>
+                <h2 className="primary-text-color">$ { this.state.myPortfolioTotal }</h2>
+                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> { this.state.myPortfolioChange } ({ this.state.myPortfolioChangePercentage }%)</h5>
                 <hr className="small" />
                 <div className="row wrapper-chart">
                     <Line 
