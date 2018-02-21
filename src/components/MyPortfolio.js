@@ -1,6 +1,12 @@
 import React from 'react';
+import { Line } from 'react-chartjs-2';
 
 const MyPortfolio = () => {
+
+    this.setState({
+        data: [47.45, 38.32, 32.79, 57.79, 78.82, 84.11, 90.13]
+    })
+
     return (
         <div>
             <h6 className="card-subtitle mb-2 text-muted">MY PORTFOLIO</h6>
@@ -9,6 +15,9 @@ const MyPortfolio = () => {
             <hr className="small" />
             <div className="row wrapper-chart">
                 <canvas id="myChart" width="400" height="250"></canvas>
+                <Line 
+                    data={this.state.data}
+                />
             </div>
         </div>
     );

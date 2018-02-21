@@ -9,7 +9,6 @@ import NotFoundPage from '../components/NotFoundPage';
 const AppRouter = () => (
     <BrowserRouter>
         <div>
-            <Header />
             <Switch>
                 <Route path="/" component={DashboardPage} exact={true} />
                 <Route component={NotFoundPage} />

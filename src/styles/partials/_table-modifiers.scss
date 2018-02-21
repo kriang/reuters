@@ -5,3 +5,25 @@
 .table tr th{
     font-weight: 400;
 }
+
+.table{
+    font-size: 14px;
+}
+
+.table-borderless th {
+    border: 0;
+}
+
+.table tr th{
+    font-weight: 600;
+    color: #376281 !important;
+}
+
+.table tr{
+    font-weight: 400;
+    color: #556c7c;
+}
+
+.table tbody tr:hover{
+    background: #fafcfd !important;
+}

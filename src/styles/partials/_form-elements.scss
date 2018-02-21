@@ -2,16 +2,28 @@
 
 
 /* Overrides */
+
 input[type="text"], select{
     box-shadow: none !important;
 }
 
 input[type="text"]:focus, select.form-control:focus{
-    border-color: $primary-color;
+    border-color: #556c7c;
 }
 
 .form-group input, .form-group select{
     height: 40px;
+}
+
+.form-check{
+    padding: 5px 20px;
+}
+
+button.button-search{
+    border: 1px solid #ebedef;
+    border-left: 0;
+    border-radius: 0 3px 3px 0;
+    background: #ebedef;
 }
 
 label{
@@ -21,7 +33,6 @@ label{
 .btn[disabled]:hover{
     background: $primary-color;
 }
-
 
 
 /* Modifiers */

@@ -1,24 +1,48 @@
 @import 'variables';
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
-    color: #222;
-    background: transparent;
+
+nav ul li{
+    list-style: none;
+    padding: 10px;
+    text-align: left;
+    margin: 10px;
 }
 
-.nav>li>a.account{
-    padding: 5px 10px;
-    text-align: center;
+nav ul{
+    padding-left: 0px;
+}
+
+nav ul li a{
+    padding: 15px;
+    width: 100%;
+    display: block;
+}
+
+nav ul li a:hover, nav ul li a.active{
+    color: $primary-color;
+    background: #dee2e6;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    color: #164567;
+    background: #f0f2f5;
+    text-decoration: none;
+    border-radius: 3px;
 }
 
 .nav-pills{
-    margin-top: 3px;
+    margin-top: 12px;
 }
 
 .nav>li>a{
-    padding: 10px 20px;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .nav-pills>li>a:hover{
-    background: transparent;
-    color: $primary-color; 
+    color: $primary-color;
+    background: #f0f2f5;
+    text-decoration: none;
 }

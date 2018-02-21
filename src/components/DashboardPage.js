@@ -17,7 +17,9 @@ const DashboardPage = () => {
 
                         { /* Page Content */}
                         <div className="col-xs-12 col-md-10 padding-lg">
+                            
                             <Header />
+                            
                             <hr className="small border-fix" />
                             
                             {/* Page Title */}
@@ -34,11 +36,7 @@ const DashboardPage = () => {
                                             <div className="card-body padding-top-fix">
 
                                                 { /* Stocks Listing Widget & making it responsive */}
-                                                <div className="table-responsive">
-                                                    
-                                                    <Stocks />
-
-                                                </div>
+                                                <Stocks />
 
                                             </div>
 
@@ -63,7 +61,9 @@ const DashboardPage = () => {
                                         <div className="card w-100">
                                             
                                             <div className="card-body">
+
                                                 <MyPortfolio />
+
                                             </div>
                                         </div>
                                     </div>
