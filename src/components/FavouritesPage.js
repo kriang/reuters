@@ -3,7 +3,7 @@ import Navigation from './Navigation';
 import Header from './Header';
 
 
-const DashboardPage = () => {
+const FavouritesPage = () => {
     return (
         <div>
             <main>
@@ -21,7 +21,7 @@ const DashboardPage = () => {
                             <hr className="small border-fix" />
                             
                             {/* Page Title */}
-                            <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Dashboard</h1></div>
+                            <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Favourites</h1></div>
 
                             <div className="row">
 
@@ -43,7 +43,7 @@ const DashboardPage = () => {
                                     </div>
 
                                 </div>
-                                
+
 
                             </div>
 
@@ -61,4 +61,4 @@ const DashboardPage = () => {
 
 };
 
-export default DashboardPage;
+export default FavouritesPage;
