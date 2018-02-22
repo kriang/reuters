@@ -47,12 +47,25 @@ class Stocks extends React.Component{
                                 <th>EPS</th>
                                 <th>P/E</th>
                                 <th className="text-right">CHANGE</th>
+                                <th>&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
                             {/* Stocks Item - Individual Position */}
                             {
                                 this.state.positions.map((position, index) => {
+
+                                    let positionStatus           = Math.random() * 2;
+                                    let positionChange           = (positionStatus > 1) ? (position.price * Math.random()).toFixed(2) : (-position.price * Math.random()).toFixed(2);
+                                    let positionChangePercentage = Math.abs(positionChange/10).toFixed(2);
+                                    let positionText             =  '';
+
+                                    if(positionChange > 0){
+                                        positionText = <span className="text-green">{ positionChange } ({positionChangePercentage}%)</span>;
+                                    }else{
+                                        positionText = <span className="text-red">{ positionChange } ({positionChangePercentage}%)</span>;
+                                    }
+
                                     return(
                                         <tr key={index}>
                                             <td>{position.symbol}</td>
@@ -60,7 +73,11 @@ class Stocks extends React.Component{
                                             <td>{position.price}</td>
                                             <td>{position.date}</td>
                                             <td>26.93</td>
-                                            <td className="text-right">+140.23(7.81%)</td>
+                                            <td className="text-right">
+                                            {
+                                                positionText
+                                            }
+                                            </td>
                                         </tr>
                                     );
                                 })

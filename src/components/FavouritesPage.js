@@ -3,6 +3,7 @@ import Navigation from './Navigation';
 import Header from './Header';
 
 
+
 const FavouritesPage = () => {
     return (
         <div>
@@ -25,7 +26,7 @@ const FavouritesPage = () => {
 
                             <div className="row">
 
-                                <div className="col-xs-12 col-md-8">
+                                <div className="col-xs-12 col-md-12">
                                     
                                     <div className="row">
                                         

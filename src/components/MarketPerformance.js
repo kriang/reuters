@@ -14,7 +14,32 @@ class MarketPerformance extends React.Component{
             marketPerformanceHigh: "7152.05",
             marketPerformanceLow: "6977.07",
         }
+        
     }
+
+    //perform actions on component mount
+    componentDidMount(){
+
+        //E2KMA4I46PEM4IZD - API Key - AlphaVantage
+
+        //fetch market position from provided api
+        fetch('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=NDAQ&apikey=E2KMA4I46PEM4IZD&outputsize=compact')
+        .then(results => {
+            return results.json();
+        }).then(data => {
+            console.log(data);
+            //assign fetched positions to local state
+            this.setState(() => {
+                return {
+                    marketPerformanceOpen: "6979.24",
+                    marketPerformanceHigh: "7152.05",
+                    marketPerformanceLow: "6977.07",
+                }
+            });
+        })
+
+    }
+
 
     render(){
         return (

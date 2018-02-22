@@ -7,7 +7,7 @@ class MyPortfolio extends React.Component{
     constructor(props){
 
         super(props);
-        
+
         this.state = {
             myPortfolioTotal: "239,123.31",
             myPortfolioChange: "5,342.30",
@@ -31,6 +31,7 @@ class MyPortfolio extends React.Component{
     }
 
     render(){
+
         return (
             <div>
                 <h6 className="card-subtitle mb-2 text-muted">MY PORTFOLIO</h6>
