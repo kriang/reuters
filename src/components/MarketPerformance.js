@@ -46,7 +46,7 @@ class MarketPerformance extends React.Component{
             <div>
                 <h6 className="card-subtitle mb-2 text-muted">MARKET PERFORMANCE</h6>
                 <h2 className="primary-text-color">{this.state.marketPerformanceTotal}</h2>
-                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> {this.state.marketPerformanceChange} ({this.state.marketPerformanceChangePercentage}%)</h5>
+                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> { (this.state.marketPerformanceChange > 0) ? <span className="text-green">{this.state.marketPerformanceChange} ({this.state.marketPerformanceChangePercentage}%)</span> : <span className="text-red">{this.state.marketPerformanceChange} ({this.state.marketPerformanceChangePercentage}%)</span> } </h5>
                 <hr className="small" />
                 <div className="row">
                     <div className="col-xs-4 mr-3"><small><strong>OPEN</strong>&nbsp;<span className="text-muted"> {this.state.marketPerformanceOpen}</span></small></div>

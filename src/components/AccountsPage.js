@@ -22,7 +22,7 @@ const AccountsPage = () => (
                                 <hr className="small border-fix" />
                                 
                                 {/* Page Title */}
-                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">News</h1></div>
+                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Accounts</h1></div>
 
                                 <div className="row">
 

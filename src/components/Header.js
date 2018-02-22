@@ -16,11 +16,18 @@ const Header = () => (
                 </div>
                 <div className="col-xs-2 col-md-8 pull-right">
                     <ul className="nav nav-pills pull-right hidden-xs">
-                        <NavLink to="/settings" activeClassName="active" className="text-left" exact={true}>
-                            <li role="presentation" className="mr-2"><a href="#"><img src="images/icons/cog.svg" width="25px;" alt="" /> Settings</a></li>
-                        </NavLink>
                         
-                        <li role="presentation"><a href="#"><img src="images/icons/user.svg" width="25px;" alt="" /> Account</a></li>
+                        <li role="presentation" className="mr-2">
+                            <NavLink to="/settings" activeClassName="active" className="text-left">
+                                <img src="images/icons/cog.svg" width="25px;" alt="" /> Settings
+                            </NavLink>
+                        </li>
+                        <li role="presentation">
+                            <NavLink to="/accounts" activeClassName="active" className="text-left">
+                                <img src="images/icons/user.svg" width="25px;" alt="" /> Account
+                            </NavLink>
+                        </li>
+                        
                     </ul>
                     
                 </div>
