@@ -10,32 +10,47 @@ import NotFoundPage from '../components/NotFoundPage';
 
 class AppRouter extends React.Component{
 
-
     constructor(props){
         super(props);
 
-        this.handleAddFavourite = this.handleAddFavourite.bind(this);
+        this.handleAddFavourite     = this.handleAddFavourite.bind(this);
+        this.handleRemoveFavourite  = this.handleRemoveFavourite.bind(this);
 
         this.state = {
-            favourites: ["MSFT", "FB"]
-        }
+            favourites: [],
+            columns: []
+        };
     }
 
     handleAddFavourite(symbolToAdd){
-        console.log('Symbol To Add from AppRouter: ' + symbolToAdd);
 
-        if(this.state.favourites.indexOf(symbolToAdd) > -1){
-            console.log('This already exists');
+        //console.log('Symbol To Add from AppRouter: ' + symbolToAdd);
+        if(!symbolToAdd){
+            return 'Symbol is empty';
+        }else if(this.state.favourites.indexOf(symbolToAdd) > -1){
+            return 'This already exists';
         }
 
-        this.setState((prevState) => ({
-            favourites: prevState.favourites.concat([symbolToAdd])
-        }));
-        console.log(this.state.favourites);
+        this.setState((prevState) => {
+            return {
+                favourites: prevState.favourites.concat([symbolToAdd])
+            }
+        });
+
+        console.log('Favs: ' + this.state.favourites);
+        
     }
     
     handleRemoveFavourite(symbolToRemove){
         console.log('Symbol To Remove from AppRouter: ' + symbolToRemove);
+        this.setState((prevState) => {
+            return {
+                favourites: prevState.favourites.filter((fav) => symbolToRemove !== fav)
+            }
+        });
+
+        console.log('Favs: ' + this.state.favourites);
+
     }
 
 

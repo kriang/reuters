@@ -45,7 +45,7 @@ class FavouritesPage extends React.Component{
 
                                                     { /* Favourites Widget */}
                                                     
-                                                    <FavouriteStock handleRemoveFavourite={this.props.handleRemoveFavourite} />
+                                                    <FavouriteStock favs={this.props.favs} handleRemoveFavourite={this.props.handleRemoveFavourite} />
 
                                                 </div>
 

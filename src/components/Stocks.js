@@ -32,10 +32,12 @@ class Stocks extends React.Component{
                 }
             });
         })
+
     }
 
     handleAddFavourite(e){ 
         console.log(e.target.id);
+        e.preventDefault();
         let symbolToAdd = e.target.id; 
         //run the handleAddFavourite prop from the props property
         this.props.handleAddFavourite(symbolToAdd);
@@ -89,9 +91,9 @@ class Stocks extends React.Component{
                                             }
                                             </td>
                                             <td>
-                                                <button className="btn btn-light btn-sm" onClick={ this.handleAddFavourite } id={position.symbol}>
+                                                <a className="btn btn-light btn-sm" onClick={ this.handleAddFavourite } id={position.symbol}>
                                                     <img src="images/icons/star.svg" width="15px;" alt="" className="" />
-                                                </button>
+                                                </a>
                                             </td>
                                         </tr>
                                     );
