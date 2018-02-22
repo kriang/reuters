@@ -5,90 +5,99 @@ import Stocks from './Stocks';
 import MarketPerformance from './MarketPerformance';
 import MyPortfolio from './MyPortfolio';
 
-const DashboardPage = () => {
-    return (
-        <div>
-            <main>
-                <div className="container">
-                    
-                    <div className="row">
+class DashboardPage extends React.Component {
+
+    constructor(props){
+        super(props);
+    }
+
+    render() {
+    
+        return (
+            <div>
+                <main>
+                    <div className="container">
                         
-                        <Navigation />
-
-                        { /* Page Content */}
-                        <div className="col-xs-12 col-md-10 padding-lg">
+                        <div className="row">
                             
-                            <Header />
-                            
-                            <hr className="small border-fix" />
-                            
-                            {/* Page Title */}
-                            <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Dashboard</h1></div>
+                            <Navigation />
 
-                            <div className="row">
+                            { /* Page Content */}
+                            <div className="col-xs-12 col-md-10 padding-lg">
+                                
+                                <Header />
+                                
+                                <hr className="small border-fix" />
+                                
+                                {/* Page Title */}
+                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Dashboard</h1></div>
 
-                                <div className="col-xs-12 col-md-8">
-                                    
-                                    <div className="row">
+                                <div className="row">
+
+                                    <div className="col-xs-12 col-md-8">
                                         
-                                        <div className="card">
+                                        <div className="row">
                                             
-                                            <div className="card-body padding-top-fix">
-
-                                                { /* Stocks Listing Widget */}
-                                                <Stocks />
-
-                                            </div>
-
-                                        </div>{ /* End of StockListing Widget Wrapper */}
-
-                                    </div>
-
-                                </div>
-
-
-                                <div className="col-xs-12 col-md-4">
-                                    <div className="row">
-                                        <div className="card w-100 mb-3">
-                                            
-                                            <div className="card-body">
+                                            <div className="card">
                                                 
-                                                { /* MarketPerformance Widget */}
-                                                <MarketPerformance />
+                                                <div className="card-body padding-top-fix">
 
-                                            </div>
+                                                    { /* Stocks Listing Widget */}
+                                                    <Stocks handleAddFavourite={this.props.handleAddFavourite} />
 
-                                        </div>{ /* End of MarketPerformance Widget Wrapper */}
-                                    </div>
-                                    
-                                    <div className="row">
-                                        <div className="card w-100">
-                                            
-                                            <div className="card-body">
+                                                </div>
 
-                                                { /* MyPortfolio Widget */}
-                                                <MyPortfolio />
+                                            </div>{ /* End of StockListing Widget Wrapper */}
 
-                                            </div>
                                         </div>
-                                    </div>{ /* End of MyPortfolio Widget Wrapper */}
-                                    
+
+                                    </div>
+
+
+                                    <div className="col-xs-12 col-md-4">
+                                        <div className="row">
+                                            <div className="card w-100 mb-3">
+                                                
+                                                <div className="card-body">
+                                                    
+                                                    { /* MarketPerformance Widget */}
+                                                    <MarketPerformance />
+
+                                                </div>
+
+                                            </div>{ /* End of MarketPerformance Widget Wrapper */}
+                                        </div>
+                                        
+                                        <div className="row">
+                                            <div className="card w-100">
+                                                
+                                                <div className="card-body">
+
+                                                    { /* MyPortfolio Widget */}
+                                                    <MyPortfolio />
+
+                                                </div>
+                                            </div>
+                                        </div>{ /* End of MyPortfolio Widget Wrapper */}
+                                        
+                                    </div>
+
+
                                 </div>
 
 
                             </div>
 
-
                         </div>
 
                     </div>
 
-                </div>
+                </main>
 
-            </main>
+            </div>
+        );
 
-        </div>
-    );
+    }
 
 };
 

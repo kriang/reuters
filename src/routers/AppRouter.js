@@ -14,13 +14,21 @@ class AppRouter extends React.Component{
     constructor(props){
         super(props);
 
+        this.handleAddFavourite = this.handleAddFavourite.bind(this);
+
         this.state = {
             favourites: ["MSFT", "FB"]
         }
     }
 
-    handleAddFavourite(){
-        console.log();
+    handleAddFavourite(symbolToAdd){
+        console.log('Symbol To Add from AppRouter: ' + symbolToAdd);
+
+
+    }
+    
+    handleRemoveFavourite(symbolToRemove){
+        console.log('Symbol To Remove from AppRouter: ' + symbolToRemove);
     }
 
 
@@ -29,8 +37,8 @@ class AppRouter extends React.Component{
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route path="/" component={DashboardPage} exact={true} />
-                        <Route path="/favourites" render={()=><FavouritesPage favs={this.state.favourites} />}/>
+                        <Route path="/" exact={true} render={()=><DashboardPage handleAddFavourite={this.handleAddFavourite} />}/>
+                        <Route path="/favourites" render={()=><FavouritesPage favs={this.state.favourites} handleRemoveFavourite={this.handleRemoveFavourite} />}/>
                         <Route component={NotFoundPage} />
                     </Switch>
                 </div>

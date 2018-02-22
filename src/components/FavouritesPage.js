@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 import Header from './Header';
+import FavouriteStock from './FavouriteStocks';
 
 
 class FavouritesPage extends React.Component{
@@ -43,7 +44,8 @@ class FavouritesPage extends React.Component{
                                                 <div className="card-body padding-top-fix">
 
                                                     { /* Favourites Widget */}
-                                                    { this.props.favs }
+                                                    
+                                                    <FavouriteStock handleRemoveFavourite={this.props.handleRemoveFavourite} />
 
                                                 </div>
 
