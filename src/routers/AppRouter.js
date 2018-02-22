@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import DashboardPage from '../components/DashboardPage';
 import FavouritesPage from '../components/FavouritesPage';
 import NewsPage from '../components/NewsPage';
+import AccountsPage from '../components/AccountsPage';
+import SettingsPage from '../components/SettingsPage';
 
 import NotFoundPage from '../components/NotFoundPage';
 
@@ -50,7 +52,7 @@ class AppRouter extends React.Component{
             }
         });
 
-        console.log('Favs: ' + this.state.favourites);
+        //console.log('Favs: ' + this.state.favourites);
 
     }
 
@@ -63,6 +65,8 @@ class AppRouter extends React.Component{
                         <Route path="/" exact={true} render={()=><DashboardPage handleAddFavourite={this.handleAddFavourite} />}/>
                         <Route path="/favourites" render={()=><FavouritesPage favs={this.state.favourites} handleRemoveFavourite={this.handleRemoveFavourite} />}/>
                         <Route path="/news" component={NewsPage} />
+                        <Route path="/accounts" component={AccountsPage} />
+                        <Route path="/settings" component={SettingsPage} />
                         <Route component={NotFoundPage} />
                     </Switch>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import Header from './Header';
 
-const NewsPage = () => (
+const AccountsPage = () => (
     
             <div>
                 
@@ -34,12 +34,12 @@ const NewsPage = () => (
                                                 
                                                 <div className="card-body padding-top-fix">
 
-                                                    { /* News Widget */}
-                                                    <p>NewsPage Content Goes Here</p>
+                                                    { /* Accounts Widget */}
+                                                    <p>User Settings Content Goes Here</p>
 
                                                 </div>
 
-                                            </div>{ /* End of News Widget Wrapper */}
+                                            </div>{ /* End of Accounts Widget Wrapper */}
 
                                         </div>
 
@@ -60,4 +60,4 @@ const NewsPage = () => (
 );
 
 
-export default NewsPage;
+export default AccountsPage;

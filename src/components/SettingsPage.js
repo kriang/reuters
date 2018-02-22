@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './Navigation';
 import Header from './Header';
 
-const NewsPage = () => (
+const SettingsPage = () => (
     
             <div>
                 
@@ -22,7 +22,7 @@ const NewsPage = () => (
                                 <hr className="small border-fix" />
                                 
                                 {/* Page Title */}
-                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">News</h1></div>
+                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Settings</h1></div>
 
                                 <div className="row">
 
@@ -34,12 +34,12 @@ const NewsPage = () => (
                                                 
                                                 <div className="card-body padding-top-fix">
 
-                                                    { /* News Widget */}
-                                                    <p>NewsPage Content Goes Here</p>
+                                                    { /* Settings Widget */}
+                                                    <p>Setting Options Goes Here</p>
 
                                                 </div>
 
-                                            </div>{ /* End of News Widget Wrapper */}
+                                            </div>{ /* End of Settings Widget Wrapper */}
 
                                         </div>
 
@@ -60,4 +60,4 @@ const NewsPage = () => (
 );
 
 
-export default NewsPage;
+export default SettingsPage;
