@@ -10,7 +10,7 @@ class MyPortfolio extends React.Component{
 
         this.state = {
             myPortfolioTotal: "239,123.31",
-            myPortfolioChange: "5,342.30",
+            myPortfolioChange: 5342.30,
             myPortfolioChangePercentage: "4.91",
             lineChartData: {
                 labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -36,7 +36,7 @@ class MyPortfolio extends React.Component{
             <div>
                 <h6 className="card-subtitle mb-2 text-muted">MY PORTFOLIO</h6>
                 <h2 className="primary-text-color">$ { this.state.myPortfolioTotal }</h2>
-                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> { this.state.myPortfolioChange } ({ this.state.myPortfolioChangePercentage }%)</h5>
+                <h5><img src="./images/icons/chevron-small-up.svg" width="35" /> { (this.state.myPortfolioChange > 0) ? <span className="text-green">{ this.state.myPortfolioChange } ({ this.state.myPortfolioChangePercentage }%) </span> : <span className="text-red">{ this.state.myPortfolioChange } ({ this.state.myPortfolioChangePercentage }%) </span> }</h5>
                 <hr className="small" />
                 <div className="row wrapper-chart">
                     <Line 

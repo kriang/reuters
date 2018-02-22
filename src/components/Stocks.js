@@ -7,6 +7,8 @@ class Stocks extends React.Component{
     constructor(props){
         super(props);
 
+        this.handleAddFavourites      = this.handleAddFavourites.bind(this);
+
         this.state = {
             positions: []
         };
@@ -31,6 +33,11 @@ class Stocks extends React.Component{
             });
         })
     }
+
+    handleAddFavourites(e){ 
+        console.log(e.target.id);
+    }
+
 
     render() {
 
@@ -77,6 +84,11 @@ class Stocks extends React.Component{
                                             {
                                                 positionText
                                             }
+                                            </td>
+                                            <td>
+                                                <button className="btn btn-light btn-sm" onClick={ this.handleAddFavourites } id={position.symbol}>
+                                                    <img src="images/icons/star.svg" width="15px;" alt="" className="" />
+                                                </button>
                                             </td>
                                         </tr>
                                     );

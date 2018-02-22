@@ -14,7 +14,7 @@ class MarketPerformance extends React.Component{
             marketPerformanceHigh: "7152.05",
             marketPerformanceLow: "6977.07",
         }
-        
+
     }
 
     //perform actions on component mount
@@ -27,7 +27,7 @@ class MarketPerformance extends React.Component{
         .then(results => {
             return results.json();
         }).then(data => {
-            console.log(data);
+            console.log(data[0]);
             //assign fetched positions to local state
             this.setState(() => {
                 return {

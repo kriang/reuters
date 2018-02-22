@@ -3,39 +3,49 @@ import Navigation from './Navigation';
 import Header from './Header';
 
 
+class FavouritesPage extends React.Component{
 
-const FavouritesPage = () => {
-    return (
-        <div>
-            <main>
-                <div className="container">
-                    
-                    <div className="row">
+
+    constructor(props){
+        super(props);
+
+        console.log(this.props.favs);
+    }
+
+    render(){
+        return (
+            <div>
+                <main>
+                    <div className="container">
                         
-                        <Navigation />
-
-                        { /* Page Content */}
-                        <div className="col-xs-12 col-md-10 padding-lg">
+                        <div className="row">
                             
-                            <Header />
-                            
-                            <hr className="small border-fix" />
-                            
-                            {/* Page Title */}
-                            <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Favourites</h1></div>
+                            <Navigation />
 
-                            <div className="row">
+                            { /* Page Content */}
+                            <div className="col-xs-12 col-md-10 padding-lg">
+                                
+                                <Header />
+                                
+                                <hr className="small border-fix" />
+                                
+                                {/* Page Title */}
+                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Favourites</h1></div>
 
-                                <div className="col-xs-12 col-md-12">
-                                    
-                                    <div className="row">
+                                <div className="row">
+
+                                    <div className="col-xs-12 col-md-12">
                                         
-                                        <div className="card">
+                                        <div className="row">
                                             
-                                            <div className="card-body padding-top-fix">
-
-                                                { /* Favourites Widget */}
+                                            <div className="card">
                                                 
+                                                <div className="card-body padding-top-fix">
+
+                                                    { /* Favourites Widget */}
+                                                    { this.props.favs }
+
+                                                </div>
 
                                             </div>
 
@@ -43,22 +53,21 @@ const FavouritesPage = () => {
 
                                     </div>
 
+
                                 </div>
 
 
                             </div>
 
-
                         </div>
 
                     </div>
 
-                </div>
+                </main>
 
-            </main>
-
-        </div>
-    );
+            </div>
+        );
+    }
 
 };
 
