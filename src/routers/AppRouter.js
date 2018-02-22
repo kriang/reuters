@@ -24,7 +24,14 @@ class AppRouter extends React.Component{
     handleAddFavourite(symbolToAdd){
         console.log('Symbol To Add from AppRouter: ' + symbolToAdd);
 
+        if(this.state.favourites.indexOf(symbolToAdd) > -1){
+            console.log('This already exists');
+        }
 
+        this.setState((prevState) => ({
+            favourites: prevState.favourites.concat([symbolToAdd])
+        }));
+        console.log(this.state.favourites);
     }
     
     handleRemoveFavourite(symbolToRemove){
