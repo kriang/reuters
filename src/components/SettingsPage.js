@@ -70,7 +70,7 @@ class SettingsPage extends React.Component{
 
                                 <div className="row">
 
-                                    <div className="col-xs-12 col-md-12">
+                                    <div className="col-xs-12 col-md-12 no-padding-mobile">
                                         
                                         <div className="row">
                                             
