@@ -70,7 +70,7 @@ class FavouritesPage extends React.Component{
 
                                                     { /* Favourites Widget */}
                                                     
-                                                    <FavouriteStock favs={this.props.favs} positions={this.props.positions} handleRemoveFavourite={this.props.handleRemoveFavourite} />
+                                                    <FavouriteStock favs={this.props.favs} handleRemoveFavourite={this.props.handleRemoveFavourite} />
 
                                                 </div>
 
