@@ -94,8 +94,6 @@ class FavouriteStocks extends React.Component{
                                         positionText = <span className="text-red">{ positionChange } ({positionChangePercentage}%)</span>;
                                     }
                                     
-
-
                                     return(
                                         
                                         <tr key={index}>
