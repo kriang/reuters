@@ -47,7 +47,6 @@ class FavouriteStocks extends React.Component{
         this.props.handleRemoveFavourite(symbolToRemove);
     }
 
-
     render() {
 
         return (
@@ -76,47 +75,55 @@ class FavouriteStocks extends React.Component{
                             {
                                 
                                 this.state.positions.map((position, index) => {
-
-                                    
-                                    let positionStatus           = Math.random() * 2;
-                                    let positionChange           = (positionStatus > 1) ? (position.price * Math.random()).toFixed(2) : (-position.price * Math.random()).toFixed(2);
-                                    let positionChangePercentage = Math.abs(positionChange/10).toFixed(2);
-                                    let positionText             =  '';
-                                    let open                     = (position.price * 1.05).toFixed(2);
-                                    let high                     = (position.price * 0.95).toFixed(2);
-                                    let low                      = position.price;
-                                    let eps                      = (position.price * 0.11).toFixed(2);
-                                    let pe                       = (position.price * 0.05).toFixed(2);
-
-                                    if(positionChange > 0){
-                                        positionText = <span className="text-green">{ positionChange } ({positionChangePercentage}%)</span>;
-                                    }else{
-                                        positionText = <span className="text-red">{ positionChange } ({positionChangePercentage}%)</span>;
-                                    }
                                     
                                     return(
                                         
-                                        <tr key={index}>
-                                            <td>{position.symbol}</td>
-                                            <td>{open}</td>
-                                            <td>{high}</td>
-                                            <td>{low}</td>
-                                            <td>{position.volume}</td>
-                                            <td>{position.price}</td>
-                                            <td>{eps}</td>
-                                            <td>{pe}</td>
-                                            <td className="text-right">
-                                                {positionText}
-                                            </td>
-                                            <td>
-                                                <a className="btn btn-light btn-sm" onClick={ this.handleRemoveFavourite } id={position.symbol}>
-                                                    Remove
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    );
+                                        this.state.favs.map((fav) => {
+                                            if(fav == position.symbol){
 
+                                                let positionStatus           = Math.random() * 2;
+                                                let positionChange           = (positionStatus > 1) ? (position.price * Math.random()).toFixed(2) : (-position.price * Math.random()).toFixed(2);
+                                                let positionChangePercentage = Math.abs(positionChange/10).toFixed(2);
+                                                let positionText             =  '';
+                                                let open                     = (position.price * 1.05).toFixed(2);
+                                                let high                     = (position.price * 0.95).toFixed(2);
+                                                let low                      = position.price;
+                                                let eps                      = (position.price * 0.11).toFixed(2);
+                                                let pe                       = (position.price * 0.05).toFixed(2);
 
+                                                if(positionChange > 0){
+                                                    positionText = <span className="text-green">{ positionChange } ({positionChangePercentage}%)</span>;
+                                                }else{
+                                                    positionText = <span className="text-red">{ positionChange } ({positionChangePercentage}%)</span>;
+                                                }
+
+                                                return(
+                                                    <tr key={index}>
+                                                        <td>{position.symbol}</td>
+                                                        <td>{open}</td>
+                                                        <td>{high}</td>
+                                                        <td>{low}</td>
+                                                        <td>{position.volume}</td>
+                                                        <td>{position.price}</td>
+                                                        <td>{eps}</td>
+                                                        <td>{pe}</td>
+                                                        <td className="text-right">
+                                                            {positionText}
+                                                        </td>
+                                                        <td>
+                                                            <a className="btn btn-light btn-sm" onClick={ this.handleRemoveFavourite } id={position.symbol}>
+                                                                Remove
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                );
+                                            }
+
+                                        })
+
+                                    )
+
+                                    
                                 })
                             }{/* End of Stocks Item Loop */}
 

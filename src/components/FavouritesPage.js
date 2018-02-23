@@ -9,9 +9,34 @@ class FavouritesPage extends React.Component{
 
     constructor(props){
         super(props);
+        this.setState({
+            positions: []
+        })
 
         console.log(this.props.favs);
     }
+
+    componentDidMount(){
+
+        //fetch positions from provided json file
+        fetch('https://s3-ap-southeast-1.amazonaws.com/advisory-data/positions.json')
+        .then(results => {
+            return results.json();
+        }).then(data => {
+      
+
+            //assign fetched positions to local state
+            let positions = data.positions;
+
+            this.setState({
+                positions: positions
+            })
+                
+        })
+
+    }
+
+    
 
     render(){
         return (
@@ -45,7 +70,7 @@ class FavouritesPage extends React.Component{
 
                                                     { /* Favourites Widget */}
                                                     
-                                                    <FavouriteStock favs={this.props.favs} handleRemoveFavourite={this.props.handleRemoveFavourite} />
+                                                    <FavouriteStock favs={this.props.favs} positions={this.props.positions} handleRemoveFavourite={this.props.handleRemoveFavourite} />
 
                                                 </div>
 
