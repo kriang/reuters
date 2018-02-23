@@ -1,3 +1,13 @@
+@media screen and (min-width: 768px) {
+    .hidden-lg{
+        display: none;
+    }
+    .hidden-sm{
+        display: block;
+    }
+}
+
+
 @media screen and (min-width: 1281px) {
     .container{
         width: 1280px;

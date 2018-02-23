@@ -71,6 +71,8 @@ class Stocks extends React.Component{
                                     let positionChange           = (positionStatus > 1) ? (position.price * Math.random()).toFixed(2) : (-position.price * Math.random()).toFixed(2);
                                     let positionChangePercentage = Math.abs(positionChange/10).toFixed(2);
                                     let positionText             =  '';
+                                    let eps                      = (position.price * 0.11).toFixed(2);
+                                    let pe                       = (position.price * 0.05).toFixed(2);
 
                                     if(positionChange > 0){
                                         positionText = <span className="text-green">{ positionChange } ({positionChangePercentage}%)</span>;
@@ -83,8 +85,8 @@ class Stocks extends React.Component{
                                             <td>{position.symbol}</td>
                                             <td>{position.volume}</td>
                                             <td>{position.price}</td>
-                                            <td>{position.date}</td>
-                                            <td>26.93</td>
+                                            <td>{eps}</td>
+                                            <td>{pe}</td>
                                             <td className="text-right">
                                             {
                                                 positionText

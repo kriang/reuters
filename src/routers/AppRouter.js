@@ -40,7 +40,6 @@ class AppRouter extends React.Component{
             }
         });
 
-        console.log('Favs: ' + this.state.favourites);
         
     }
     

@@ -27,14 +27,48 @@ class DashboardPage extends React.Component {
                                 
                                 <Header />
                                 
-                                <hr className="small border-fix" />
+                                <hr className="small border-fix hidden-sm" />
                                 
                                 {/* Page Title */}
-                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">Dashboard</h1></div>
+                                <div className="mt-4 mb-4 hidden-sm"><h1 className="page-title primary-text-color">Dashboard</h1></div>
 
                                 <div className="row">
 
-                                    <div className="col-xs-12 col-md-8">
+                                    
+
+
+                                    <div className="col-xs-12 col-md-4 pull-right no-padding-mobile">
+                                        
+                                        <div className="row">
+                                            <div className="card w-100 mb-4">
+                                                
+                                                <div className="card-body">
+
+                                                    { /* MyPortfolio Widget */}
+                                                    <MyPortfolio />
+
+                                                </div>
+                                            </div>
+                                        </div>{ /* End of MyPortfolio Widget Wrapper */}
+                                    
+                                        <div className="row">
+                                            <div className="card w-100 mb-3">
+                                                
+                                                <div className="card-body">
+                                                    
+                                                    { /* MarketPerformance Widget */}
+                                                    <MarketPerformance />
+
+                                                </div>
+
+                                            </div>{ /* End of MarketPerformance Widget Wrapper */}
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+
+                                    <div className="col-xs-12 col-md-8 pull-left no-padding-mobile">
                                         
                                         <div className="row">
                                             
@@ -51,35 +85,6 @@ class DashboardPage extends React.Component {
 
                                         </div>
 
-                                    </div>
-
-
-                                    <div className="col-xs-12 col-md-4">
-                                        <div className="row">
-                                            <div className="card w-100 mb-3">
-                                                
-                                                <div className="card-body">
-                                                    
-                                                    { /* MarketPerformance Widget */}
-                                                    <MarketPerformance />
-
-                                                </div>
-
-                                            </div>{ /* End of MarketPerformance Widget Wrapper */}
-                                        </div>
-                                        
-                                        <div className="row">
-                                            <div className="card w-100">
-                                                
-                                                <div className="card-body">
-
-                                                    { /* MyPortfolio Widget */}
-                                                    <MyPortfolio />
-
-                                                </div>
-                                            </div>
-                                        </div>{ /* End of MyPortfolio Widget Wrapper */}
-                                        
                                     </div>
 
 

@@ -6,13 +6,13 @@ const Navigation = () => {
         <div className="col-xs-12 col-md-2 aside">
                                     
                 { /* Logo Wrapper */}
-                <div className="col-xs-12">
+                <div className="col-xs-12 hidden-sm">
                     <h1 className="logo">STOCKIE</h1>
                 </div>{ /* End of Logo Wrapper */}
-                
+
                 
                 { /* Primary Navigation */ }
-                <nav>
+                <nav className="primary-navigation">
                     <ul>
                         <li>
                             <NavLink to="/" activeClassName="active" className="text-left" exact={true}>
