@@ -53,13 +53,13 @@ class Stocks extends React.Component{
                         {/* Stocks Listing Table Title */}
                         <thead>   
                             <tr>
+                                <th>&nbsp;</th>
                                 <th>SYMBOL</th>
                                 <th>VOLUME</th>
                                 <th>PRICE</th>
                                 <th>EPS</th>
                                 <th>P/E</th>
                                 <th className="text-right">CHANGE</th>
-                                <th>&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -82,6 +82,11 @@ class Stocks extends React.Component{
 
                                     return(
                                         <tr key={index}>
+                                            <td>
+                                                <a className="btn btn-light btn-sm" onClick={ this.handleAddFavourite } id={position.symbol}>
+                                                    <img src="images/icons/star.svg" width="15px;" alt="" className="" />
+                                                </a>
+                                            </td>
                                             <td>{position.symbol}</td>
                                             <td>{position.volume}</td>
                                             <td>{position.price}</td>
@@ -92,11 +97,7 @@ class Stocks extends React.Component{
                                                 positionText
                                             }
                                             </td>
-                                            <td>
-                                                <a className="btn btn-light btn-sm" onClick={ this.handleAddFavourite } id={position.symbol}>
-                                                    <img src="images/icons/star.svg" width="15px;" alt="" className="" />
-                                                </a>
-                                            </td>
+                                            
                                         </tr>
                                     );
                                 })
