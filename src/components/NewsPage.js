@@ -19,14 +19,14 @@ const NewsPage = () => (
                                 
                                 <Header />
                                 
-                                <hr className="small border-fix" />
+                                <hr className="small border-fix hidden-sm" />
                                 
                                 {/* Page Title */}
-                                <div className="mt-4 mb-4"><h1 className="page-title primary-text-color">News</h1></div>
+                                <div className="mt-4 mb-4 hidden-sm"><h1 className="page-title primary-text-color">News</h1></div>
 
                                 <div className="row">
 
-                                    <div className="col-xs-12 col-md-12">
+                                    <div className="col-xs-12 col-md-12 no-padding-mobile">
                                         
                                         <div className="row">
                                             
