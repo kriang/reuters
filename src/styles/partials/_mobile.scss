@@ -40,11 +40,13 @@
 
     nav ul li a{
         text-align: center !important;
+        padding: 10px !important;
     }
 
     nav ul li img{
         width: 20px;
         display: block;
+        margin: 0 auto !important;
     }
 
 
@@ -54,6 +56,10 @@
 
     .no-padding-mobile{
         padding: 1px !important;
+    }
+
+    .mr-2{
+        margin-right: auto !important;
     }
 
     .account{

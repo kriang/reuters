@@ -15,18 +15,18 @@ const Navigation = () => {
                 <nav className="primary-navigation">
                     <ul>
                         <li>
-                            <NavLink to="/" activeClassName="active" className="text-left" exact={true}>
+                            <NavLink to="/" activeClassName="active" className="" exact={true}>
                                 <img src="images/icons/bar-graph.svg" width="25px;" alt="" className="mr-2" /> Dashboard
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/favourites" activeClassName="active" className="text-left">
+                            <NavLink to="/favourites" activeClassName="active" className="">
                                 <img src="images/icons/star.svg" width="25px;" alt="" className="mr-2" /> Favourites
                             </NavLink>
                             
                         </li>
                         <li>
-                            <NavLink to="/news" activeClassName="active" className="text-left">
+                            <NavLink to="/news" activeClassName="active" className="">
                                 <img src="images/icons/news.svg" width="25px;" alt="" className="mr-2" /> News
                             </NavLink>
 
