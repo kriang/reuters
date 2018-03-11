@@ -2,11 +2,17 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 
 
-import DashboardPage from '../components/DashboardPage';
-import FavouritesPage from '../components/FavouritesPage';
-import NewsPage from '../components/NewsPage';
-import AccountsPage from '../components/AccountsPage';
-import SettingsPage from '../components/SettingsPage';
+import BuscarIdPadre from '../components/BuscarIdPadre';
+import BuscarIdPadreSearchResult from '../components/BuscarIdPadreSearchResult';
+import CrearParamentrosComparacion from '../components/CrearParamentrosComparacion';
+import AgregarProductorHijos from '../components/AgregarProductorHijos';
+import AgregarProductorHijosSearchResult from '../components/AgregarProductorHijosSearchResult';
+import AgregarMassProductosHijos from '../components/AgregarMassProductosHijos';
+import ResumenAntesDeCrearRanking from '../components/ResumenAntesDeCrearRanking';
+import RankingDeProductos from '../components/RankingDeProductos';
+import HomeTodosLosRankings from '../components/HomeTodosLosRankings';
+import Configuracion from '../components/Configuracion';
+import Home from '../components/Home';
 
 import NotFoundPage from '../components/NotFoundPage';
 
@@ -15,58 +21,29 @@ class AppRouter extends React.Component{
 
     constructor(props){
         super(props);
-
-        this.handleAddFavourite     = this.handleAddFavourite.bind(this);
-        this.handleRemoveFavourite  = this.handleRemoveFavourite.bind(this);
-
-        this.state = {
-            favourites: [],
-            columns: []
-        };
     }
 
-    handleAddFavourite(symbolToAdd){
-
-        //console.log('Symbol To Add from AppRouter: ' + symbolToAdd);
-        if(!symbolToAdd){
-            return 'Symbol is empty';
-        }else if(this.state.favourites.indexOf(symbolToAdd) > -1){
-            return 'This already exists';
-        }
-
-        this.setState((prevState) => {
-            return {
-                favourites: prevState.favourites.concat([symbolToAdd])
-            }
-        });
-
-        
-    }
     
-    handleRemoveFavourite(symbolToRemove){
-        console.log('Symbol To Remove from AppRouter: ' + symbolToRemove);
-        this.setState((prevState) => {
-            return {
-                favourites: prevState.favourites.filter((fav) => symbolToRemove !== fav)
-            }
-        });
-
-        //console.log('Favs: ' + this.state.favourites);
-
-    }
-
-
     render(){
         return (
             <BrowserRouter>
                 <div>
                     <Switch>
-                        <Route path="/" exact={true} render={()=><DashboardPage handleAddFavourite={this.handleAddFavourite} />}/>
-                        <Route path="/favourites" render={()=><FavouritesPage favs={this.state.favourites} handleRemoveFavourite={this.handleRemoveFavourite} />}/>
-                        <Route path="/news" component={NewsPage} />
-                        <Route path="/accounts" component={AccountsPage} />
-                        <Route path="/settings" component={SettingsPage} />
+                        
+                        <Route path="/" exact={true} component={BuscarIdPadre} />
+                        <Route path="/buscaridsearchresult" component={BuscarIdPadreSearchResult} />
+                        <Route path="/crearparamentroscomparacion" component={CrearParamentrosComparacion} />
+                        <Route path="/agregarproductorhijos" component={AgregarProductorHijos} />
+                        <Route path="/agregarproductorijossearchresult" component={AgregarProductorHijosSearchResult} />
+                        <Route path="/agregarmassproductoshijos" component={AgregarMassProductosHijos} />
+                        <Route path="/resumenantesdecrearranking" component={ResumenAntesDeCrearRanking} />
+                        <Route path="/rankingdeproductos" component={RankingDeProductos} />
+                        <Route path="/hometodoslosrankings" component={HomeTodosLosRankings} />
+                        <Route path="/configuracion" component={Configuracion} />
+                        <Route path="/home" component={Home} />
+
                         <Route component={NotFoundPage} />
+
                     </Switch>
                 </div>
             </BrowserRouter>

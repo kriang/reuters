@@ -2,11 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Stockie - An Amazing Portfolio Management Responsive App</title>
+        <title>B2G</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/b2g.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/autocomplete.css">
+        <link rel="stylesheet" href="css/prism.css">
         
 
     </head>
@@ -14,7 +18,88 @@
         
         <div id="app"></div>
 
-        <script src="/bundle.js"></script>        
+        <script src="/bundle.js"></script> 
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/autocomplete.js"></script>
+        <script type="text/javascript" src="scripts/bootstrap-select.js"></script> 
+        
+        <script type="text/javascript">
+
+            $('.trigger').on('click', function(){
+                $(this).toggleClass('clicked');
+            });
+
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                    $('#date').slideUp(300,"linear");
+                } else {
+                    $('#date').slideDown(300,"linear");
+                }
+
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    $('#number').slideUp(300,"linear");
+                } else {
+                    $('#number').slideDown(300,"linear");
+                }
+            }
+
+
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+
+            $('#example').tooltip(options);
+
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $(".desaparece").fadeOut(1500);
+                },3000);
+            });
+    
+            var proposals =['123405 Guantes de latex sin...', 
+                            '123406 Guantes de latex sin...', 
+                            '123407 Guantes de latex sin...', 
+                            '123408 Guantes de latex sin...', 
+                            '234509 Guantes de latex sin...', 
+                            '234510 Guantes de latex sin...'];
+    
+            $(document).ready(function(){
+                $('#search-form').autocomplete({
+                    hints: proposals,
+                    width: '80%',
+                    height: 40,
+                    onSubmit: function(text){
+                        $('#message').html('Seleccionado: <b>' + text + '</b>');			
+                    }
+                });
+            });
+    
+            $(document).ready(function () {
+                var mySelect = $('#first-disabled2');
+                $('#special').on('click', function () {
+                    mySelect.find('option:selected').prop('disabled', true);
+                    mySelect.selectpicker('refresh');
+                });
+                $('#special2').on('click', function () {
+                    mySelect.find('option:disabled').prop('disabled', false);
+                    mySelect.selectpicker('refresh');
+                });
+                $('#basic2').selectpicker({
+                    liveSearch: true,
+                    maxOptions: 1
+                });
+            });
+    
+            $(document).on('click', '.dropdown-menu', function(e) {
+                e.stopPropagation()
+            })
+            
+            $('#myModal').modal(options)
+    
+        </script>
         
     </body>
 </html>
